@@ -1,8 +1,8 @@
 # Site settings
 title: KJ6DXJ
 description: > # this means to ignore newlines until "baseurl:"
-  A test site evaluating GitHub Pages and Jekyll.
-#baseurl: "/drunken-avenger" # the subpath of your site, e.g. /blog/
+  A simple blog.
+#baseurl: "/drunken-avenger/" # the subpath of your site, e.g. /blog/
 url: "http://www.kj6dxj.net" # the base hostname & protocol for your site
 
 # Build settings
