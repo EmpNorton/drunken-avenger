@@ -4,21 +4,21 @@ layout: nil
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
  
- <title>Eric Jones</title>
- <link href="http://erjjones.github.com/atom.xml" rel="self"/>
- <link href="http://erjjones.github.com/"/>
+ <title>KJ6DXJ</title>
+ <link href="http://www.kj6dxj.net/atom.xml" rel="self"/>
+ <link href="http://www.kj6dxj.net	/"/>
  <updated>{{ site.time | date_to_xmlschema }}</updated>
- <id>http://erjjones.github.com</id>
+ <id>http://www.kj6dxj.net</id>
  <author>
-   <name>Eric Jones</name>
+   <name>Bruce Takenaka</name>
  </author>
  
  {% for post in site.posts %}
  <entry>
    <title>{{ post.title }}</title>
-   <link href="http://erjjones.github.com{{ post.url }}"/>
+   <link href="http://www.kj6dxj.net{{ post.url }}"/>
    <updated>{{ post.date | date_to_xmlschema }}</updated>
-   <id>http://erjjones.github.com{{ post.id }}</id>
+   <id>http://www.kj6dxj.net{{ post.id }}</id>
    <content type="html">{{ post.content | xml_escape }}</content>
  </entry>
  {% endfor %}
