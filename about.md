@@ -13,7 +13,6 @@ deploying the pages using Jekyll.
 
 Thanks for visiting!
 
-
 73,
 
 --Bruce, KJ6DXJ
