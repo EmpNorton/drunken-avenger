@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Welcome to KJ6DXJ!"
-date:   2015-02-21 08:18:00
+title:  "Welcome to KJ6DXJ"
+date:   2016-03-05 08:05:00
 categories: jekyll
 ---
 Welcome to the resurrected kj6dxj.net. This blog had previously existed as a WordPress site that I could never quite get going because I was always trying to manipulate it to look the way I wanted. In other words, I was bogged down with the administration more than the content. Hopefully that will change with now. Like many others in similar situations, I discovered Jekyll powered GitHub Pages. Not only did this solve the VPS costs and Wordpress admin problems, it allows me to experiment with newer technology that also fits the size of the blog I want to run.
