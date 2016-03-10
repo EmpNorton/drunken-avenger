@@ -6,7 +6,7 @@ description: > # this means to ignore newlines until "baseurl:"
 url: "http://www.kj6dxj.net" # the base hostname & protocol for your site
 
 # Build settings
-markdown: redcarpet
+markdown: kramdown
 pygments: true
 
 permalink: /blog/:title
