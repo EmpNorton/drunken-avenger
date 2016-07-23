@@ -1,33 +1,35 @@
-<div class="navbar navbar-fixed-top">
-  <div class="navbar-inner">
-	<div class="container">
-	  <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-		<span class="icon-bar"></span>
-		<span class="icon-bar"></span>
-		<span class="icon-bar"></span>
-	  </a>
-	  <a class="brand" href="http://www.kj6dxj.net/">Bruce's Blog</a>
-	  <div class="nav-collapse">
-		<ul class="nav">		  
-		  <li class="">
-				<a href="http://www.kj6dxj.net"><i class="icon-home"></i> Home </a>
-			</li>
-		  <li class="dropdown">
-				<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-comment"></i> Projects <b class="caret"></b></a>
-				<ul class="dropdown-menu">
-					<li class="divider" />
-					<li class=""><a href="http://feeds.feedburner.com/github" rel="tooltip" title="Go to feedburner" target="_blank">RSS</a></li>
-				</ul>
-			</li>
-	    <li class="dropdown">
-				<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-list"></i> Recipes <b class="caret"></b></a>
-				<ul class="dropdown-menu">					
-					<li class=""><a href="http://www.kj6dxj.net/cocacolacake.html" rel="tooltip" title="Coca Cola Cake" target="_blank">Coca Cola Cake</a></li>					
-					<li class=""><a href="http://www.kj6dxj.net/gingerbread.html" rel="tooltip" title="Gingerbread Cookies" target="_blank">Gingerbread Cookies</a></li>					
-				</ul>
-			</li>			
-		</ul>		
+<div class="navigation-wrapper">
+	<nav role="navigation" id="site-nav" class="animated drop">
+	    <ul>
+      {% for link in site.data.navigation %}
+		    {% if link.url contains 'http' %}
+		        {% assign domain = '' %}
+		        {% else %}
+		        {% assign domain = site.url %}
+		    {% endif %}
+		    <li><a href="{{ domain }}{{ link.url }}" {% if link.url contains 'http' %}target="_blank"{% endif %}>{{ link.title }}</a></li>
+		  {% endfor %}
+	    </ul>
+	</nav>
+</div><!-- /.navigation-wrapper -->
+
+{% include browser-upgrade.html %}
+
+{% if page.image.feature %}<header class="masthead">
+	{% if site.logo != null %}
+		<div class="wrap">
+			<a href="{{ site.url }}/" class="site-logo" rel="home" title="{{ site.title }}"><img src="{{ site.url }}/images/{{ site.logo }}" width="200" height="200" alt="{{ site.title }} logo" class="animated fadeInDown"></a>
 		</div>
+	{% endif %}
+</header><!-- /.masthead -->
+{% else %}<header class="masthead">
+	<div class="wrap">
+      {% if site.logo != null %}
+  		<a href="{{ site.url }}/" class="site-logo" rel="home" title="{{ site.title }}"><img src="{{ site.url }}/images/{{ site.logo }}" width="200" height="200" alt="{{ site.title }} logo" class="animated fadeInDown"></a>
+      {% endif %}
+      <h1 class="site-title animated fadeIn"><a href="{{ site.url }}/">{{ site.title }}</a></h1>
+		<h2 class="site-description animated fadeIn" itemprop="description">{{ site.description }}</h2>
 	</div>
-	</div>
-</div>
+</header><!-- /.masthead -->{% endif %}
+
+<div class="js-menu-screen menu-screen"></div>
