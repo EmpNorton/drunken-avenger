@@ -7,6 +7,6 @@ url: "http://www.kj6dxj.net" # the base hostname & protocol for your site
 
 # Build settings
 markdown: kramdown
-pygments: true
+highlighter: rouge
 
 permalink: /blog/:title
